@@ -177,7 +177,8 @@ nav{background:linear-gradient(rgba(246,238,220,.94) 70%,transparent);backdrop-f
 .sticker:active{animation-play-state:paused}@keyframes bob{50%{translate:0 -6px}}
 .z1{width:92px;right:22%;top:14%}.z2{width:88px;right:8%;top:32%}.z3{width:100px;right:27%;bottom:24%}
 .z4{width:76px;right:12%;bottom:10%}.z5{width:72px;right:36%;top:6%}.z6{width:72px;right:40%;bottom:7%}
-.z7{width:78px;right:7%;top:26px}.z8{width:88px;right:17%;top:62px}
+.about-section{overflow:hidden}
+.z7{width:78px;right:7%;top:96px}.z8{width:88px;right:17%;top:132px}
 .z9{width:70px;right:5%;top:30px}.z10{width:80px;right:14%;top:62px}.z11{width:70px;right:24%;top:22px}
 .z12{width:80px;right:6%;top:32px}.z13{width:74px;right:16%;top:64px}.z14{width:66px;right:26%;top:24px}
 .z15{width:118px;right:9%;top:22px}.z16{width:72px;right:23%;top:82px}.z17{width:62px;right:5%;top:166px}
@@ -192,9 +193,9 @@ nav{background:linear-gradient(rgba(246,238,220,.94) 70%,transparent);backdrop-f
 .k1{width:64px;right:20%;top:38%}.k2{width:80px;right:4%;top:62%}.k3{width:108px;left:9%;top:76%}
 @media(max-width:1100px){.stamp{display:none}.k1,.k2,.k3{top:auto;bottom:18px;left:auto}.k1{right:18%;width:48px}.k2{right:5%;width:50px}.k3{right:30%;width:70px}}
 @media(max-width:1000px){.z3,.z4,.flight{display:none}.z6{right:12%;bottom:12%;width:64px}
-.z7,.z9,.z12,.z15{top:12px;right:5%;width:52px}.z8,.z10,.z13,.z16{top:22px;right:17%;width:52px}.z11,.z14,.z17{display:none}}
+.about-section .z7,.z9,.z12,.z15{top:58px;right:5%;width:52px}.about-section .z8,.z10,.z13,.z16{top:88px;right:17%;width:52px}.z11,.z14,.z17{display:none}}
 @media(max-width:800px){.z1{width:58px;right:4%;top:3%}.z2{width:54px;right:24%;top:1%}.z5{display:none}.z6{right:24%;bottom:5%;width:52px}
-.z7,.z9,.z12,.z15{top:8px;width:44px}.z8,.z10,.z13,.z16{top:14px;width:44px}.z18{width:54px}}
+.about-section .z7,.z9,.z12,.z15{top:44px;width:44px}.about-section .z8,.z10,.z13,.z16{top:70px;width:44px}.z18{width:54px}}
 @media(prefers-reduced-motion:reduce){.rv{stroke-dashoffset:0}.sticker{animation:none}}
 .hstage{position:absolute;right:2%;top:10%;bottom:10%;width:38%;pointer-events:none}
 .hstage .sticker{pointer-events:auto}
@@ -224,7 +225,7 @@ nav{background:linear-gradient(rgba(246,238,220,.94) 70%,transparent);backdrop-f
 .care{display:inline-block;width:2px;height:.85em;background:var(--rust);margin-left:3px;vertical-align:-0.08em;animation:blk 1s steps(2) infinite}
 .care.gone{animation:none;opacity:0;transition:opacity .5s}
 @keyframes blk{50%{opacity:0}}
-@media(prefers-reduced-motion:reduce){.rc{opacity:1!important;transform:none!important}.care{display:none}}
+@media(prefers-reduced-motion:reduce){.rc{opacity:0;transform:none}.care{display:none}}
 .idewrap{position:relative;max-width:420px;margin-top:38px;transform:rotate(-1deg)}
 .ide{background:#1e1e1e;border-radius:10px;overflow:hidden;box-shadow:0 18px 40px rgba(30,20,10,.35),0 2px 0 rgba(0,0,0,.2)}
 .ide .tbar{display:flex;align-items:center;gap:7px;padding:10px 14px;background:#2a2a2a;border-bottom:1px solid #333}
@@ -423,6 +424,8 @@ section{scroll-margin-top:calc(var(--nav-h) + 8px)}
 .clink:hover,.clink:focus-visible{background:#171923;border-color:#171923;color:#fff}
 [data-theme="dark"] .clink:hover,[data-theme="dark"] .clink:focus-visible{background:#2b4fd8;border-color:#2b4fd8;color:#fff}
 @media(max-width:1000px){.flight{display:block;--fw:min(160%,700px);width:var(--fw);left:auto;right:calc(4% - var(--fw)*.03);top:0;z-index:1}}
+
+.project-actions{margin-top:auto;padding-top:18px}.project-link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 14px;border:1.5px solid var(--ink);border-radius:999px;text-decoration:none;font:500 .84rem/1.2 "DM Sans",sans-serif;color:var(--ink);background:transparent;transition:transform .2s,background .2s,color .2s}.project-link:hover,.project-link:focus-visible{background:var(--ink);color:var(--paper);transform:translateY(-1px)}.project-link.disabled{opacity:.48;cursor:not-allowed}.project-link.disabled:hover,.project-link.disabled:focus-visible{background:transparent;color:var(--ink);transform:none}@media(max-width:800px){.project-link{min-height:44px;padding:10px 16px}}
 </style>
 </head>
 <body>
@@ -460,7 +463,7 @@ section{scroll-margin-top:calc(var(--nav-h) + 8px)}
   <div class="cta"><a class="btn" href="#projects">See my projects</a><a class="btn alt" href="#print">View resume</a></div>
 </section>
 
-<section id="about"><svg class="sticker z7" data-r="7"><use href="#st-cursor"/></svg><svg class="sticker z8" data-r="-6"><use href="#st-floppy"/></svg>
+<section id="about" class="about-section"><svg class="sticker z7" data-r="7"><use href="#st-cursor"/></svg><svg class="sticker z8" data-r="-6"><use href="#st-floppy"/></svg>
   <p class="eyebrow">About</p><h2>The person <em class="sq">behind</em> the work</h2>
   <div class="abt">
     <div class="paper win" style="padding:0"><svg class="clip"><use href="#clipsym"/></svg><div class="ide" style="border-radius:0;box-shadow:none;margin-top:2px"><div class="tbar"><i></i><i></i><i></i><span class="tname">manasa.ts</span></div><pre id="idecode"></pre></div></div>
@@ -477,13 +480,13 @@ section{scroll-margin-top:calc(var(--nav-h) + 8px)}
   <div class="lens" id="lens"><button class="chip on" data-f="all">All</button><button class="chip" data-f="case">Case studies</button><button class="chip" data-f="project">Projects</button></div>
   <div class="track" id="track">
     <article class="card" tabindex="0" data-lens="project"><svg class="clip"><use href="#clipsym"/></svg><span class="num">01</span><small>Project · Product · Data</small><h3>Business Decision Simulator</h3><p class="hook">Finds the profit-maximising price from 540K+ rows and quantifies the downside risk.</p>
-      <div class="more"><p>A profit-maximising pricing engine on 540,000+ historical rows, with a Monte Carlo risk model (5,000+ iterations), an A/B testing engine, and an LLM layer that turns the stats into executive recommendations.</p><div class="tags"><span>Python</span><span>Monte Carlo</span><span>A/B testing</span><span>LLM</span></div></div></article>
+      <div class="more"><p>A profit-maximising pricing engine on 540,000+ historical rows, with a Monte Carlo risk model (5,000+ iterations), an A/B testing engine, and an LLM layer that turns the stats into executive recommendations.</p><div class="tags"><span>Python</span><span>Monte Carlo</span><span>A/B testing</span><span>LLM</span></div><div class="project-actions" aria-label="Project links"><a class="project-link disabled" href="#" data-project-link="project-link-01" aria-disabled="true">Add project link ↗</a></div></div></article>
     <article class="card" tabindex="0" data-lens="case"><svg class="clip"><use href="#clipsym"/></svg><span class="num">02</span><small>Case study · Product · UX</small><h3>UPI Payment Behaviour Analysis</h3><p class="hook">Delayed confirmations drive retries and duplicate payments. Fix: show state, add recovery and an undo window.</p>
-      <div class="more"><p>Analysed 10K+ simulated transactions to study payment uncertainty. Delayed confirmations drove retries and duplicate payments, so I proposed state visibility, recovery flows and an undo window.</p><div class="tags"><span>Analysis</span><span>Product interventions</span><span>UX</span></div></div></article>
+      <div class="more"><p>Analysed 10K+ simulated transactions to study payment uncertainty. Delayed confirmations drove retries and duplicate payments, so I proposed state visibility, recovery flows and an undo window.</p><div class="tags"><span>Analysis</span><span>Product interventions</span><span>UX</span></div><div class="project-actions" aria-label="Project links"><a class="project-link disabled" href="#" data-project-link="project-link-02" aria-disabled="true">Add project link ↗</a></div></div></article>
     <article class="card" tabindex="0" data-lens="project"><svg class="clip"><use href="#clipsym"/></svg><span class="num">03</span><small>Project · ML</small><h3>Credit Risk Monitoring &amp; Drift Detection</h3><p class="hook">Flags which features drifted, by how much, and what to do next.</p>
-      <div class="more"><p>A credit risk simulation for new-to-credit borrowers in India, using UPI activity and gig income as signals. Tableau alerts flag feature-importance and prediction drift, and Gemini writes the risk narrative.</p><div class="tags"><span>Python</span><span>Tableau</span><span>Gemini API</span></div></div></article>
+      <div class="more"><p>A credit risk simulation for new-to-credit borrowers in India, using UPI activity and gig income as signals. Tableau alerts flag feature-importance and prediction drift, and Gemini writes the risk narrative.</p><div class="tags"><span>Python</span><span>Tableau</span><span>Gemini API</span></div><div class="project-actions" aria-label="Project links"><a class="project-link disabled" href="#" data-project-link="project-link-03" aria-disabled="true">Add project link ↗</a></div></div></article>
     <article class="card" tabindex="0" data-lens="case"><svg class="clip"><use href="#clipsym"/></svg><span class="num">04</span><small>Case study · HCI</small><h3>How AI answers shape thinking</h3><p class="hook">How AI answers change the way people think and decide.</p>
-      <div class="more"><p>A research project on how AI responses change the way people think and make decisions.</p><div class="tags"><span>Study design</span><span>HCI</span></div></div></article>
+      <div class="more"><p>A research project on how AI responses change the way people think and make decisions.</p><div class="tags"><span>Study design</span><span>HCI</span></div><div class="project-actions" aria-label="Project links"><a class="project-link disabled" href="#" data-project-link="project-link-04" aria-disabled="true">Add project link ↗</a></div></div></article>
   </div>
 </section>
 
@@ -562,7 +565,7 @@ addEventListener("pageshow",e=>{if(e.persisted)location.reload()});
 </script>
 <script>
 // ---- typewriter: caret follows the typing; only tagline + section headings ----
-const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const prefersReduced = false; // Keep portfolio typewriter/IDE reveal working on mobile; reduced-motion only affects decorative motion.
 function prepType(h){
   if(h._spans) return h._spans;
   const walker=document.createTreeWalker(h, NodeFilter.SHOW_TEXT);
@@ -675,6 +678,27 @@ if(!prefersReduced){
   if(window.ResizeObserver) new ResizeObserver(later).observe(document.body);
 })();
 (function(){const nav=document.querySelector('nav');if(!nav)return;const set=()=>document.documentElement.style.setProperty('--nav-h',nav.offsetHeight+'px');set();addEventListener('resize',set);addEventListener('load',set);if(window.ResizeObserver)new ResizeObserver(set).observe(nav);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(set)})();
+</script>
+
+<script>
+// Replace the empty values with real GitHub repos, case-study pages, or live demos.
+const PROJECT_LINKS = {
+  "project-link-01": "",
+  "project-link-02": "",
+  "project-link-03": "",
+  "project-link-04": ""
+};
+document.querySelectorAll("[data-project-link]").forEach((link) => {
+  const url = PROJECT_LINKS[link.dataset.projectLink];
+  if (url) {
+    link.href = url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = /github\.com/i.test(url) ? "View on GitHub ↗" : "View project ↗";
+    link.classList.remove("disabled");
+    link.removeAttribute("aria-disabled");
+  }
+});
 </script>
 </body>
 </html>
