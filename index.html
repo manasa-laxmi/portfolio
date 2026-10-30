@@ -425,7 +425,10 @@ section{scroll-margin-top:calc(var(--nav-h) + 8px)}
 [data-theme="dark"] .clink:hover,[data-theme="dark"] .clink:focus-visible{background:#2b4fd8;border-color:#2b4fd8;color:#fff}
 @media(max-width:1000px){.flight{display:block;--fw:min(160%,700px);width:var(--fw);left:auto;right:calc(4% - var(--fw)*.03);top:0;z-index:1}}
 
-.project-actions{margin-top:auto;padding-top:18px}.project-link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 14px;border:1.5px solid var(--ink);border-radius:999px;text-decoration:none;font:500 .84rem/1.2 "DM Sans",sans-serif;color:var(--ink);background:transparent;transition:transform .2s,background .2s,color .2s}.project-link:hover,.project-link:focus-visible{background:var(--ink);color:var(--paper);transform:translateY(-1px)}.project-link.disabled{opacity:.48;cursor:not-allowed}.project-link.disabled:hover,.project-link.disabled:focus-visible{background:transparent;color:var(--ink);transform:none}@media(max-width:800px){.project-link{min-height:44px;padding:10px 16px}}
+.project-actions{position:absolute;right:20px;bottom:20px;z-index:4}.project-link{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;padding:0;border:1.5px solid var(--ink);border-radius:4px;text-decoration:none;font:500 1.1rem/1 "DM Sans",sans-serif;color:var(--ink);background:var(--card);transition:transform .2s,background .2s,color .2s,border-color .2s}.project-link:hover,.project-link:focus-visible{background:var(--ink);color:var(--paper);transform:translateY(-2px)}.project-link.disabled{opacity:.48;cursor:not-allowed;pointer-events:none}.project-link.disabled:hover,.project-link.disabled:focus-visible{background:var(--card);color:var(--ink);transform:none}.project-link:focus-visible{outline:2px solid var(--rust);outline-offset:3px}@media(max-width:800px){.project-link{width:44px;height:44px;min-height:44px;padding:0}}
+#idecode{color:#c9d1d9}
+.clink:hover,.clink:focus-visible{transform:none}
+@media(max-width:560px){#hero .eyebrow{white-space:normal;height:auto;line-height:1.7}}
 </style>
 </head>
 <body>
@@ -457,7 +460,7 @@ section{scroll-margin-top:calc(var(--nav-h) + 8px)}
 
 <section id="hero">
   <div class="hstage"><svg class="sticker h1" data-r="-6"><use href="#st-monitor"/></svg><svg class="sticker h2" data-r="6"><use href="#st-linechart"/></svg><svg class="sticker h3" data-r="-4"><use href="#st-code"/></svg></div><svg class="flight" viewBox="0 0 1000 200" aria-hidden="true"><defs><mask id="rv" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="200"><path d="M560 104C640 20 740 26 800 70S930 96 970 26" fill="none" stroke="#fff" stroke-width="12" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" class="rv"/></mask></defs><path d="M560 104C640 20 740 26 800 70S930 96 970 26" fill="none" stroke="#6f5645" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="1 9" mask="url(#rv)" opacity=".8"/><circle cx="560" cy="104" r="5" fill="#b5533c" stroke="#171923" stroke-width="1.6"/><text x="550" y="128" font-family="DM Mono,monospace" font-size="13" fill="#6f5645">HYD 17.38°N</text><g id="jet" class="jet" opacity="0"><set attributeName="opacity" to="1" begin="0.5s" fill="freeze"/><animateMotion dur="5.2s" begin="0.5s" fill="freeze" rotate="auto" calcMode="spline" keyPoints="0;1" keyTimes="0;1" keySplines=".4 .1 .3 1" path="M560 104C640 20 740 26 800 70S930 96 970 26"/><use href="#st-plane" x="-24" y="-24" width="48" height="48" transform="rotate(42)"/></g></svg>
-  <p class="eyebrow">Product · UX / HCI · ML · Data</p>
+  <p class="eyebrow">Product thinking · AI/ML · Human-centred design</p>
   <h1>Manasa<br><em class="sq">Laxmi</em><svg class="tickmark" viewBox="0 0 40 40" width="64" height="64" fill="none" stroke="#b5533c" stroke-width="3" stroke-linecap="round"><path d="M7.7 22.3Q10.6 14.2 11.2 5.7M14.9 25.1Q21.7 19.9 26.9 13.1M18.7 32.1Q26.8 31.6 34.3 28.8"/></svg></h1>
   <p class="tagline">searching for problems worth <span class="nw">solving</span></p>
   <div class="cta"><a class="btn" href="#projects">See my projects</a><a class="btn alt" href="#print">View resume</a></div>
@@ -466,27 +469,37 @@ section{scroll-margin-top:calc(var(--nav-h) + 8px)}
 <section id="about" class="about-section"><svg class="sticker z7" data-r="7"><use href="#st-cursor"/></svg><svg class="sticker z8" data-r="-6"><use href="#st-floppy"/></svg>
   <p class="eyebrow">About</p><h2>The person <em class="sq">behind</em> the work</h2>
   <div class="abt">
-    <div class="paper win" style="padding:0"><svg class="clip"><use href="#clipsym"/></svg><div class="ide" style="border-radius:0;box-shadow:none;margin-top:2px"><div class="tbar"><i></i><i></i><i></i><span class="tname">manasa.ts</span></div><pre id="idecode"></pre></div></div>
+    <div class="paper win" style="padding:0"><svg class="clip"><use href="#clipsym"/></svg><div class="ide" style="border-radius:0;box-shadow:none;margin-top:2px"><div class="tbar"><i></i><i></i><i></i><span class="tname">~/manasa</span></div><pre id="idecode"></pre></div></div>
     <div class="paper now2"><svg class="clip"><use href="#clipsym"/></svg><h3>Right now</h3>
-      <dl><dt>building</dt><dd>a credit risk drift monitor</dd><dt>studying</dt><dd>final-year CS, BITS Hyderabad</dd><dt>reading</dt><dd>behavioural economics</dd><dt>fuel</dt><dd>filter coffee</dd></dl>
+      <dl><dt>building</dt><dd>products that make experiences better</dd><dt>reading</dt><dd>behavioural economics</dd><dt>asking</dt><dd>does AI make us think less?</dd><dt>fuel</dt><dd>filter coffee</dd></dl>
       <svg class="sticker z18" data-r="9"><use href="#st-coffee"/></svg></div>
   </div>
-  <div class="bio2"><h3>Hi, I'm Manasa.</h3><p>I'm a final-year computer science student at BITS Hyderabad with a background in HCI and a real interest in finance. I like problems where people's behaviour and the numbers disagree, and working out why.</p></div>
+  <div class="bio2"><h3>Hi, I'm Manasa.</h3><p>I'm a final-year Computer Science student at BITS Pilani, Hyderabad, aspiring to build a career in Product Management. I enjoy turning ambiguous problems into meaningful products by understanding user needs, shaping product strategy, and measuring impact.</p><p>My interests lie at the intersection of Product Management, AI/ML, Human-Computer Interaction (HCI), and Data Analytics. I enjoy exploring product ideas, experimenting with AI-powered tools, and building products that are intuitive, scalable, and worth coming back to.</p></div>
 </section>
 
 <section id="projects">
   <svg class="sticker z9" data-r="-6"><use href="#st-wireframe"/></svg><svg class="sticker z10" data-r="-8"><use href="#st-terminal"/></svg>
   <p class="eyebrow">Projects</p><h2>Things I've <em class="sq">built</em> &amp; studied</h2>
-  <div class="lens" id="lens"><button class="chip on" data-f="all">All</button><button class="chip" data-f="case">Case studies</button><button class="chip" data-f="project">Projects</button></div>
+  <div class="lens" id="lens"><button class="chip on" data-f="all">All</button><button class="chip" data-f="build">Builds</button><button class="chip" data-f="product">Product thinking</button></div>
   <div class="track" id="track">
-    <article class="card" tabindex="0" data-lens="project"><svg class="clip"><use href="#clipsym"/></svg><span class="num">01</span><small>Project · Product · Data</small><h3>Business Decision Simulator</h3><p class="hook">Finds the profit-maximising price from 540K+ rows and quantifies the downside risk.</p>
-      <div class="more"><p>A profit-maximising pricing engine on 540,000+ historical rows, with a Monte Carlo risk model (5,000+ iterations), an A/B testing engine, and an LLM layer that turns the stats into executive recommendations.</p><div class="tags"><span>Python</span><span>Monte Carlo</span><span>A/B testing</span><span>LLM</span></div><div class="project-actions" aria-label="Project links"><a class="project-link disabled" href="#" data-project-link="project-link-01" aria-disabled="true">Add project link ↗</a></div></div></article>
-    <article class="card" tabindex="0" data-lens="case"><svg class="clip"><use href="#clipsym"/></svg><span class="num">02</span><small>Case study · Product · UX</small><h3>UPI Payment Behaviour Analysis</h3><p class="hook">Delayed confirmations drive retries and duplicate payments. Fix: show state, add recovery and an undo window.</p>
-      <div class="more"><p>Analysed 10K+ simulated transactions to study payment uncertainty. Delayed confirmations drove retries and duplicate payments, so I proposed state visibility, recovery flows and an undo window.</p><div class="tags"><span>Analysis</span><span>Product interventions</span><span>UX</span></div><div class="project-actions" aria-label="Project links"><a class="project-link disabled" href="#" data-project-link="project-link-02" aria-disabled="true">Add project link ↗</a></div></div></article>
-    <article class="card" tabindex="0" data-lens="project"><svg class="clip"><use href="#clipsym"/></svg><span class="num">03</span><small>Project · ML</small><h3>Credit Risk Monitoring &amp; Drift Detection</h3><p class="hook">Flags which features drifted, by how much, and what to do next.</p>
-      <div class="more"><p>A credit risk simulation for new-to-credit borrowers in India, using UPI activity and gig income as signals. Tableau alerts flag feature-importance and prediction drift, and Gemini writes the risk narrative.</p><div class="tags"><span>Python</span><span>Tableau</span><span>Gemini API</span></div><div class="project-actions" aria-label="Project links"><a class="project-link disabled" href="#" data-project-link="project-link-03" aria-disabled="true">Add project link ↗</a></div></div></article>
-    <article class="card" tabindex="0" data-lens="case"><svg class="clip"><use href="#clipsym"/></svg><span class="num">04</span><small>Case study · HCI</small><h3>How AI answers shape thinking</h3><p class="hook">How AI answers change the way people think and decide.</p>
-      <div class="more"><p>A research project on how AI responses change the way people think and make decisions.</p><div class="tags"><span>Study design</span><span>HCI</span></div><div class="project-actions" aria-label="Project links"><a class="project-link disabled" href="#" data-project-link="project-link-04" aria-disabled="true">Add project link ↗</a></div></div></article>
+    <article class="card" tabindex="0" data-lens="build"><svg class="clip"><use href="#clipsym"/></svg><span class="num">01</span><small>Build · AI payments</small><h3>Agent Pay Consent</h3><p class="hook">When an AI agent pays on your behalf, how do you know what you agreed to?</p>
+      <div class="more"><p>A consent flow on Google's open Agent Payments Protocol (AP2). You set a spending rule in plain language, Gemini turns it into limits the agent can't exceed, and every payment shows which rule approved it and how to revoke it.</p><div class="tags"><span>Gemini API</span><span>AP2</span><span>Figma</span><span>Consent UX</span></div></div></article>
+    <article class="card" tabindex="0" data-lens="product"><svg class="clip"><use href="#clipsym"/></svg><span class="num">02</span><small>Research · HCI</small><h3>How AI answers shape our decisions</h3><p class="hook">When an AI hands you an answer, do you still think it through?</p>
+      <div class="more"><p>A survey and in-depth user interviews on when people trust, check or override what an AI tells them, and what that means for designing AI that supports judgment instead of replacing it.</p><div class="tags"><span>Survey design</span><span>User interviews</span><span>HCI</span><span>AI</span></div></div></article>
+    <article class="card" tabindex="0" data-lens="build"><svg class="clip"><use href="#clipsym"/></svg><span class="num">03</span><small>Build · Fintech</small><h3>MANKART</h3><p class="hook">Decision tools for the big money questions Indian households face: rent or buy, prepay or invest, old or new tax regime.</p>
+      <div class="more"><p>Built with a co-founder; I own product and the PRD. Every engine is checked against a spreadsheet model, Monte Carlo simulations show a range of outcomes instead of one number, and Gemini explains the result in plain language.</p><div class="tags"><span>React</span><span>FastAPI</span><span>Monte Carlo</span><span>Gemini API</span></div></div></article>
+    <article class="card" tabindex="0" data-lens="product"><svg class="clip"><use href="#clipsym"/></svg><span class="num">04</span><small>Product improvement · Maps</small><h3>Parking in Google Maps</h3><p class="hook">Maps gets you to the street. Then you circle the block looking for a spot.</p>
+      <div class="more"><p>Why parking is still the unsolved last step of a drive in Indian cities, who it hurts most, and a feature proposal for finding a spot before you arrive, with the metrics I'd use to judge it.</p><div class="tags"><span>Product improvement</span><span>User research</span><span>Metrics</span></div></div></article>
+    <article class="card" tabindex="0" data-lens="build product"><svg class="clip"><use href="#clipsym"/></svg><span class="num">05</span><small>Teardown + build</small><h3>Accessible UPI</h3><p class="hook">Paying with Google Pay using only a screen reader, then a voice-first flow that fixes what broke.</p>
+      <div class="more"><p>An audit of core UPI flows (scan, send, check balance) with Android's TalkBack, scored against WCAG. The issues I find shape a voice-first payment prototype.</p><div class="tags"><span>TalkBack</span><span>WCAG</span><span>Figma</span><span>Usability testing</span></div></div></article>
+    <article class="card" tabindex="0" data-lens="product"><svg class="clip"><use href="#clipsym"/></svg><span class="num">06</span><small>Teardown · AI</small><h3>Gemini for Telugu speakers</h3><p class="hook">Where does the Gemini app break for someone who thinks in Telugu, not English?</p>
+      <div class="more"><p>Testing Gemini on everyday Telugu tasks: voice, mixed Telugu-English and local context, building on my work on a Telugu LLM. Ends with three prioritised fixes and how I'd measure each.</p><div class="tags"><span>Teardown</span><span>Multilingual AI</span><span>Success metrics</span></div></div></article>
+    <article class="card" tabindex="0" data-lens="build"><svg class="clip"><use href="#clipsym"/></svg><span class="num">07</span><small>Build · Privacy</small><h3>SentinelAI</h3><p class="hook">Stops you from pasting your Aadhaar, PAN or card number into an AI chatbot.</p>
+      <div class="more"><p>A Chrome extension that spots Indian personal identifiers as you type and masks them before they leave the browser.</p><div class="tags"><span>JavaScript</span><span>Chrome extension</span><span>Privacy</span></div></div></article>
+    <article class="card" tabindex="0" data-lens="product"><svg class="clip"><use href="#clipsym"/></svg><span class="num">08</span><small>Product design</small><h3>Designing for food restrictions</h3><p class="hook">The interview classic: design a product for people with food restrictions.</p>
+      <div class="more"><p>Worked end to end: who has restrictions and why, their most painful moments, three solutions compared, one chosen, and how I'd measure whether it works.</p><div class="tags"><span>Product design</span><span>Prioritisation</span><span>Metrics</span></div></div></article>
+    <article class="card" tabindex="0" data-lens="build product"><svg class="clip"><use href="#clipsym"/></svg><span class="num">09</span><small>Build · HCI</small><h3>Navigation app for visually impaired users</h3><p class="hook">Can you design for users you couldn't recruit? An HCI project built in a team of three.</p>
+      <div class="more"><p>We couldn't find blind participants, so we tested with blindfolded sighted users, then wrote up what that method can and can't tell you about real users.</p><div class="tags"><span>HCI</span><span>Accessibility</span><span>Usability testing</span></div></div></article>
   </div>
 </section>
 
@@ -494,26 +507,26 @@ section{scroll-margin-top:calc(var(--nav-h) + 8px)}
   <p class="eyebrow">Skills</p><h2>What I <em class="sq">bring</em></h2>
   <div class="paper sk" style="margin-top:40px"><svg class="clip a"><use href="#clipsym"/></svg><svg class="clip b"><use href="#clipsym"/></svg>
     <div class="cols">
-      <div class="col"><h3>Product</h3><span>PRDs</span><span>A/B testing</span><span>Experimentation</span><span>Product interventions</span></div>
-      <div class="col"><h3>UX / HCI</h3><span>User research</span><span>Figma</span><span>Prototyping</span><span>Usability</span></div>
-      <div class="col"><h3>ML</h3><span>Python</span><span>C / C++</span><span>RAG</span><span>Drift monitoring</span><span>LLM evaluation</span></div>
-      <div class="col"><h3>Data</h3><span>SQL</span><span>R</span><span>Excel</span><span>Tableau</span><span>Monte Carlo</span></div>
+      <div class="col"><h3>Product</h3><span>Product sense</span><span>PRDs</span><span>A/B testing</span><span>Success metrics</span><span>Prioritisation</span></div>
+      <div class="col"><h3>UX / HCI</h3><span>User research</span><span>User interviews</span><span>Usability testing</span><span>Accessibility</span><span>Prototyping</span><span>Figma</span></div>
+      <div class="col"><h3>AI / ML</h3><span>Supervised learning</span><span>Unsupervised learning</span><span>Tree-based models</span><span>Model evaluation</span><span>LLMs &amp; RAG</span><span>Prompt engineering</span></div>
+      <div class="col"><h3>Data</h3><span>Python</span><span>SQL</span><span>Tableau</span><span>Excel</span><span>Monte Carlo</span></div>
     </div>
   </div>
   <div class="certs"><h3 class="sq">Certifications</h3><div class="ticks">
     <div class="tk"><svg viewBox="0 0 48 48" width="46" height="46"><path d="M16 32l-4 14 12-6 12 6-4-14" fill="#b5533c" stroke="#171923" stroke-linejoin="round" stroke-width="2.5"/><circle cx="24" cy="20" r="14" fill="#d19a3a" stroke="#171923" stroke-linejoin="round" stroke-width="2.5"/><circle cx="24" cy="20" r="7.5" fill="none" stroke="#171923" stroke-linejoin="round" stroke-width="2"/></svg><div><b>Google UX Design</b><span>Google · Coursera</span></div></div>
     <div class="tk"><svg viewBox="0 0 48 48" width="46" height="46"><path d="M16 32l-4 14 12-6 12 6-4-14" fill="#5470e8" stroke="#171923" stroke-linejoin="round" stroke-width="2.5"/><circle cx="24" cy="20" r="14" fill="#c3cffa" stroke="#171923" stroke-linejoin="round" stroke-width="2.5"/><circle cx="24" cy="20" r="7.5" fill="none" stroke="#171923" stroke-linejoin="round" stroke-width="2"/></svg><div><b>Meta Data Analytics</b><span>Meta · Coursera</span></div></div>
-    <div class="tk"><svg viewBox="0 0 48 48" width="46" height="46"><path d="M16 32l-4 14 12-6 12 6-4-14" fill="#d19a3a" stroke="#171923" stroke-linejoin="round" stroke-width="2.5"/><circle cx="24" cy="20" r="14" fill="#5470e8" stroke="#171923" stroke-linejoin="round" stroke-width="2.5"/><circle cx="24" cy="20" r="7.5" fill="none" stroke="#171923" stroke-linejoin="round" stroke-width="2"/></svg><div><b>Amazon AWS</b><span>Amazon · Coursera</span></div></div>
   </div></div>
 </section>
 
 <section id="resume">
   <p class="eyebrow">Resume</p><h2>Experience &amp; <em>background</em><svg class="tickmark sm" viewBox="0 0 40 40" fill="none" stroke="#b5533c" stroke-width="3.5" stroke-linecap="round" aria-hidden="true"><path d="M7.7 22.3Q10.6 14.2 11.2 5.7M14.9 25.1Q21.7 19.9 26.9 13.1M18.7 32.1Q26.8 31.6 34.3 28.8"/></svg></h2>
   <div class="tl">
-    <div class="ev"><div class="when">Internship</div><h3>Risk Analytics Intern</h3><p class="co">Standard Chartered · WRB, PS 2</p><p>Credit risk modelling and monitoring: generated model reports, checked for model breaches, tracked metrics and built Tableau dashboards.</p><div class="tags"><span>Risk analytics</span><span>Tableau</span><span>Model monitoring</span></div></div>
-    <div class="ev"><div class="when">May – Jul 2025</div><h3>AI Developer Intern</h3><p class="co">Visam.ai</p><p>Built data preprocessing pipelines for multilingual Indian-language LLMs, implemented RAG pipelines and contributed to iterative model evaluation.</p><div class="tags"><span>LLMs</span><span>RAG</span><span>Evaluation</span></div></div>
-    <div class="ev"><div class="when">Final year</div><h3>Computer Science</h3><p class="co">BITS Hyderabad</p><p>Background in HCI, with a genuine interest in financial topics.</p></div>
-    <div class="ev"><div class="when">Beyond class</div><h3>Photography &amp; volunteering</h3><p class="co">Department of Photography · Swecha</p><p>Event coverage, visual content and workshop organisation, plus volunteering at medical camps and in healthcare outreach.</p></div>
+    <div class="ev"><div class="when">Jul – Dec 2026</div><h3>Intern</h3><p class="co">Standard Chartered · Wealth &amp; Retail Banking</p><p>Moved monitoring for 75+ credit-risk models across 22 portfolios from separate SAS workflows to one config-driven Python framework, cutting runtime from 6–8 hours to under 2 per model. Built the reporting layer that flags which models need review.</p><div class="tags"><span>Python</span><span>Automation</span><span>Reporting</span></div></div>
+    <div class="ev"><div class="when">Summer internship</div><h3>AI Developer Intern</h3><p class="co">Visam.ai</p><p>Built data preprocessing pipelines for a Telugu LLM covering 3+ dialects, implemented RAG pipelines and ran iterative model evaluations.</p><div class="tags"><span>LLMs</span><span>RAG</span><span>Evaluation</span></div></div>
+    <div class="ev"><div class="when">2023 – 2027</div><h3>B.E. Computer Science</h3><p class="co">BITS Pilani, Hyderabad Campus</p><p>Coursework includes Data Structures &amp; Algorithms, Database Systems, Operating Systems, Human-Computer Interaction and Machine Learning.</p></div>
+    <div class="ev"><div class="when">Beyond the classroom</div><h3>Department of Photography</h3><p class="co">BITS Hyderabad</p><p>Event coverage and visual content for campus events, and organising photography workshops.</p></div>
+    <div class="ev"><div class="when">Community</div><h3>Volunteering</h3><p class="co">Swecha</p><p>Volunteering at medical camps and in healthcare outreach.</p></div>
   </div>
   <div class="printer" id="print">
     <div class="pbody" id="pbody"><button class="btn" id="dl">Download resume</button><div class="slot"></div></div>
@@ -526,16 +539,16 @@ section{scroll-margin-top:calc(var(--nav-h) + 8px)}
   <div class="cin">
     <p class="eyebrow">Contact</p>
     <h2 class="chead">Let's build something <em class="sq">together.</em></h2>
-    <p class="csub" style="margin-bottom:44px">Open to product, UX / HCI, ML and analytics roles, and to interesting conversations. Don't be a stranger.</p>
+    <p class="csub" style="margin-bottom:44px">Have a question, an idea, or just want to say hello? I'd love to hear from you.</p>
     <p class="sayhi">say hi ↓</p>
     <div class="clinks">
       <div class="swrap"><span class="say" aria-hidden="true">say hi</span><svg class="sarrow" viewBox="0 0 100 70" aria-hidden="true"><path class="c" pathLength="1" d="M6 10C6 46 40 60 86 40"/><path class="h" pathLength="1" d="M74 39.1L86 40L78.5 49.4"/></svg><a class="clink" href="mailto:manasalaxmi.sangam@gmail.com">manasalaxmi.sangam@gmail.com</a></div>
       <a class="clink" href="https://www.linkedin.com/in/manasa-laxmi" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="clink" href="https://github.com/yourname" target="_blank" rel="noopener">GitHub</a>
+      <a class="clink" href="https://github.com/manasa-laxmi" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </section>
-<footer><span class="sig">M.</span><p>© 2026 Manasa Laxmi · built with HTML, CSS &amp; filter coffee</p><a href="#hero">Back to top ↑</a></footer>
+<footer><span class="sig">M.</span><a href="#hero">Back to top ↑</a></footer>
 
 <script>
 // Draggable stickers (keeps their base tilt, last touched sits on top)
@@ -631,18 +644,22 @@ if(!prefersReduced){
 (function(){
   const el=document.getElementById('idecode'); if(!el) return;
   const lines=[
-    '<mark class="hl">// Final-year CS student at BITS Hyderabad.</mark>',
-    '<span class="cm">// I like the space where how people behave</span>',
-    '<span class="cm">// meets what the data says.</span>',
-    '<span class="kw">const</span> <span class="pn">manasa</span> = {',
-    '  <span class="pn">role</span>: <span class="st">"Product · UX · ML · Data"</span>,',
-    '  <span class="pn">based</span>: <span class="st">"BITS Hyderabad"</span>',
-    '};'
+    '<span class="kw">~ $</span> whoami',
+    'manasa laxmi sangam',
+    '<span class="kw">~ $</span> cat what-drives-me.txt',
+    'understanding people',
+    'exploring ideas',
+    'breaking down complex problems',
+    'working across teams',
+    '<span class="kw">~ $</span> cat off-hours.txt',
+    'photography',
+    'reading',
+    'finding the next place to travel'
   ];
   if(prefersReduced){ el.innerHTML = lines.join('\n'); return; }
   let li=0;
   function next(){
-    if(li>=lines.length){ el.insertAdjacentHTML('beforeend','<span class="idecaret"></span>'); return; }
+    if(li>lines.length){ return; }
     el.innerHTML = lines.slice(0,li).join('\n') + (li>0?'\n':'') + '<span class="idecaret"></span>';
     setTimeout(()=>{ li++; next(); }, 260);
   }
@@ -694,7 +711,7 @@ document.querySelectorAll("[data-project-link]").forEach((link) => {
     link.href = url;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.textContent = /github\.com/i.test(url) ? "View on GitHub ↗" : "View project ↗";
+    link.textContent = "↗"; link.setAttribute("aria-label", /github\.com/i.test(url) ? "View project on GitHub" : "View project"); link.title = link.getAttribute("aria-label");
     link.classList.remove("disabled");
     link.removeAttribute("aria-disabled");
   }
